@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paymetn MeThod</title>
+    <link rel="stylesheet" href="Style/payment.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu">
+                <a href=""><img src="/img/Menu.png" alt=""></a>
+            </div>
+            <div class="logo">
+                <a href=""><img src="/img/Group.png" alt=""></a>
+            </div>
+            <div class="search-bag">
+                <a href=""><img src="/img/Search.png" alt=""></a>
+                <a href=""><img src="/img/shopping bag.png" alt=""></a>
+            </div>
+        </div>
+        <div class="title">
+            <h1 id="title">Payment method</h1>
+            <img src="/img/3.png" alt="">
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+
+                <img src="img/imgPayment/debit-gpn-card.jpg" style="width:316px">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="img/imgPayment/fusion-debit-card.jpg" style="width:316px">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="img/imgPayment/debit-gpn-card.jpg" style="width:316px">
+            </div>
+
+
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="container1">
+            <div>
+                <form>
+                    <div class="omrs-input-group">
+                        <label class="omrs-input-underlined">
+                            <input required>
+                            <span class="omrs-input-label">Name on Card</span>
+                            <span class="omrs-input-helper">Please enter your exactly as it appears on your card</span>
+                        </label>
+                    </div>
+                    <div class="omrs-input-group">
+                        <label class="omrs-input-underlined">
+                            <input required>
+                            <span class="omrs-input-label">Card Number</span>
+                        </label>
+                    </div>
+                    <div class="omrs-input-group" style="width:130px">
+                        <label class="omrs-input-underlined">
+                            <input required>
+                            <span class="omrs-input-label">Exp Month</span>
+                        </label>
+                    </div>
+                    <div class="omrs-input-group" style="width: 130px">
+                        <label class="omrs-input-underlined">
+                            <input required id="txtExp">
+                            <span class="omrs-input-label" id="txtExp">Exp Date</span>
+                        </label>
+                    </div>
+                    <div class="omrs-input-group">
+                        <label class="omrs-input-underlined">
+                            <input required>
+                            <span class="omrs-input-label">CVV</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="Checkout3.html"><img src="/img/shopping bag1.png" alt="" id="img1">Add Card</a>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+
+</html>
